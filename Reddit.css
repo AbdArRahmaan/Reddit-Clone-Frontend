@@ -1,17 +1,16 @@
 body {
     margin: 0;
     padding: 0;
-    overflow-x: hidden; /* Stops horizontal scroll */
+    height: 200vh;
 }
 .nav {
-  position: sticky;
-  top: 0;
-  overflow: hidden;
+  position: fixed;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding-top: 10px;
-  max-height: 6vh;
+  max-height: 5vh;
+  width: 100%;
 }
 .small{
     width: 120px;
@@ -20,7 +19,7 @@ body {
 .search {
     display: flex;
     align-items: center;
-    padding: 8px 14px; /* Reduce excess padding */
+    padding: 8px 14px;
     border-radius: 20px;
     background-color: rgb(230, 235, 238);
     width: 500px;
@@ -88,7 +87,91 @@ body {
 .more:hover {
     background-color: rgb(221, 228, 232);
 }
-.hr {
-    margin-left: 0px;
-    margin-right: 0px;
+.sticky-header {
+    position: fixed;
+    width: 100%;
+    top: 6.5vh;
+    z-index: 20; /* Ensure it stays above other elements */
+    background: white; /* Prevents transparency issues */
+    padding-top: 1vh;
+    scroll-padding-top: none;
 }
+
+.hr {  
+    display: block;
+    height: 2px;
+    width: 100%;
+    background-color: grey;
+    border: none;
+}
+
+
+/* making the sidebar */
+.sidebar{
+    position: fixed;
+    top: 10vh;
+    max-width: 15vw;
+    min-width: 15vw;
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+.feed{
+    display: grid;
+    grid-row-gap: 20px;
+}
+.vertical-line{
+    margin-top: 0px;
+    width: 1px;
+    position: fixed;
+    top: 6.5vh;
+    height: 94vh;
+    margin-left: 15vw;
+    margin-top: 0px;
+    background-color: gray;
+}
+
+.sidebaricon {
+    max-width: 20px;
+    margin-right: 10px;
+}
+
+.dropdown-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-header:hover {
+    background-color: rgb(246, 248, 249);
+}
+
+.dropdown-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.dropdown-content div {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-content div:hover {
+    background-color: rgb(246, 248, 249);
+}
+
+.dropdown.expanded .dropdown-content {
+    max-height: 500px; 
+}
+
+
