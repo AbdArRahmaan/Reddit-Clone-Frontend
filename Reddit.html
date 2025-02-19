@@ -9,7 +9,7 @@
 </head>
 <body>
     <nav class="nav">
-        
+
         <img class="small" src="/images/Reddit-Logo.png" alt="">
         
         <form action="searchbar">
@@ -38,10 +38,106 @@
                 <img src="/images/Three-Dots.png" alt="">
             </button>
         </div> 
-
     </nav>
-    <div class="hr">
-        <hr />
+    <div class="sticky-header">
+        <hr class="hr">
     </div>
+    
+
+    <nav class="sidebar">
+        <div class="container">
+            
+            <div class="feed">    
+                <div class="home">
+                    <button style="outline: none; border: none; background-color: transparent;">
+                        <img class="sidebaricon" src="/images/Home-icon-light.png" alt="">
+                        Home
+                    </button>
+                </div>
+
+                <div class="popular">
+                    <button>
+                        <img class="sidebaricon" src="/images/trending-icon.png" alt="">
+                        Popular
+                    </button>
+                </div>
+                <hr style="width: 15vw;">
+            </div>
+            
+            <div class="recent">
+
+            </div>
+
+            <div class="dropdown">
+                <div class="dropdown-header">
+                    <span>Topics</span>
+                </div>
+
+                <div class="dropdown-content">
+                    <div class="viral">
+                        <img class="sidebaricon" src="images/Smiling-icon.png" alt="">
+                        Internet Culture (Viral)
+                    </div>
+                    <div class="games">
+                        <img class="sidebaricon" src="images/game-controller.png" alt="">
+                        Games
+                    </div>
+                    <div class="question">
+                        <img class="sidebaricon" src="/images/Q&a.png" alt="">
+                        Q&As
+                    </div>
+                    <div class="tech">
+                        <img src="images/microchip.png" alt="" class="sidebaricon">
+                        Technology
+                    </div>
+                    <div class="pop">
+                        <img src="images/star.png" alt="" class="sidebaricon">
+                        Pop Culture
+                    </div>
+                    <div class="films">
+                        <img src="images/Director Cut.png" alt="" class="sidebaricon">
+                        Movies & TV
+                    </div>
+                </div>
+                <hr style="width: 15vw;">
+            </div>
+
+            <div class="dropdown">
+                <div class="dropdown-header">
+                    <span>Resources</span>
+                </div>
+
+                <div class="dropdown-content">
+                    <div class="about">
+                        <img src="/images/rddt.svg" alt="" class="sidebaricon">
+                        About Reddit
+                    </div>
+
+                    <div class="ad">
+                        <img src="images/marketing.png" alt="" class="sidebaricon">
+                        Advertise
+                    </div>
+
+                    <div class="help">
+                        <img src="images/question.png" alt="" class="sidebaricon">
+                        Help
+                    </div>
+
+                    <div class="blog">
+                        <img src="images/blog.png" alt="" class="sidebaricon">
+                        Blog
+                    </div>
+
+                    <div class="careers">
+                        <img src="images/microphone.png" alt="" class="sidebaricon">
+                        Press
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="vertical-line"></div>
+    </nav>
+
+    <script src="Reddit.js"></script>
 </body>
 </html>
